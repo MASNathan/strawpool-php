@@ -1,0 +1,22 @@
+{
+    "name": "masnathan/strawpool-php",
+    "type": "library",
+    "description": "Simple class that allows you to use strawpool on your website.",
+    "keywords": ["strawpool","pool"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "André Filipe",
+            "email": "andre.r.flip@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "masnathan/curl": "0.0.1"
+    },
+    "autoload": {
+        "psr-0": {
+            "MASNathan\\Strawpool\\": "src/"
+        }
+    }
+}
