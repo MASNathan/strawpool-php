@@ -15,12 +15,23 @@ use MASNathan\Curl\Ch;
  */
 class Strawpool
 {
+	/**
+	 * Strawpool ID
+	 * @var int
+	 */
 	public $id;
 
+	/**
+	 * Class constructor
+	 * @param string $title
+	 * @param array $options
+	 * @param bool $multiple_choice
+	 * @param bool $permissive
+	 */
 	public function __construct($title, array $options, $multiple_choice = false, $permissive = false)
 	{
 		if (count($options) < 2) {
-			throw new Exception("You must use atleast two options!");
+			throw new \Exception("You must use atleast two options!");
 		}
 
 		$data = array(
@@ -35,11 +46,21 @@ class Strawpool
 			}, 'json');
 	}
 
+	/**
+	 * Magic function toString
+	 * @return string
+	 */
 	public function __toString()
 	{
 		return $this->getHtml();
 	}
 
+	/**
+	 * Returns the iframe html
+	 * @param int $width
+	 * @param int $height
+	 * @param int $border
+	 */
 	public function getHtml($width = 600, $height = 332, $border = 0)
 	{
 		return sprintf(
